@@ -18,6 +18,17 @@ Usage
 
 after connected console, you can use consul!
 
+Use vagrant
+------------
+If you don't have a environment of docker, build it by Vagrant.
+
+    vagrant up
+
+after about 10 minitues, you can use docker.
+This environment include foostan/consul. If you want run consul on docker, exec this command.
+
+    docker run -i -t foostan/consul
+
 Contributing
 -------------
 1. Fork it
