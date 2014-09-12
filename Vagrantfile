@@ -6,6 +6,6 @@ Vagrant.configure("2") do |config|
   config.vm.network :private_network, ip: "192.168.33.10"
 
   config.vm.provision "docker" do |d|
-    #d.pull_images "foostan/consul"
+    d.pull_images "foostan/consul"
   end
 end
