@@ -10,10 +10,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder "./share", "/home/core/share", id: "core", :nfs => true,  :mount_options => ['nolock,vers=3,udp']
 
   (1..NUM_OF_INSTANCES).each do |i|
-    node_name = "docker-host-%02d" % i
+    node_name = "docker-host#{i}"
 
     config.vm.define vm_name = node_name do |server|
       ip = "192.168.33.#{i+10}"
+      server.vm.hostname node_name
       server.vm.network :private_network, ip: ip
       server.vm.provision "shell" do |s|
         s.inline = <<-EOF
