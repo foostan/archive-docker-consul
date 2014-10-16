@@ -1,0 +1,6 @@
+{
+  "datacenter": "dc1",
+  "data_dir": "/tmp/consul",
+  "server": true,
+  "ui_dir": "/home/core/share/consul/ui"
+}

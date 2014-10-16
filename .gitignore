@@ -1,1 +1,3 @@
 .vagrant
+share/consul/bin/consul
+share/consul/ui/*
