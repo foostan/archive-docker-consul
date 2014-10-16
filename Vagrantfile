@@ -7,7 +7,7 @@ NUM_OF_INSTANCES = 4
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "yungsang/coreos"
-  config.vm.synced_folder "share", "/home/core/share", id: "core", :nfs => true,  :mount_options => ['nolock,vers=3,udp']
+  config.vm.synced_folder "./share", "/home/core/share", id: "core", :nfs => true,  :mount_options => ['nolock,vers=3,udp']
 
   (1..NUM_OF_INSTANCES).each do |i|
     node_name = "docker-host-%02d" % i

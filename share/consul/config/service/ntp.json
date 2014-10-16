@@ -3,7 +3,7 @@
         "name": "ntp",
         "tags": [],
         "check": {
-            "script": "/consul/share/bin/check_ntp",
+            "script": "/home/core/share/consul/bin/check_ntp",
             "interval": "10s"
         }
     }
